@@ -19,7 +19,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.thefriedlandgroup.imagesleuthclient.ISAsyncClient</mainClass>
+                  <mainClass>com.imagesleuth.imagesleuthclient.ISAsyncClient</mainClass>
                 </transformer>
               </transformers>
             </configuration>

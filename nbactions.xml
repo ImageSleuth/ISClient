@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath com.imagesleuth.imagesleuthclient.ISAsyncClient http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
+                <exec.args>-classpath %classpath ${packageClassName} http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -24,7 +24,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath com.imagesleuth.imagesleuthclient.ISAsyncClient http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath ${packageClassName} http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -39,7 +39,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath com.imagesleuth.imagesleuthclient.ISAsyncClient http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
+                <exec.args>-classpath %classpath ${packageClassName} http://10.0.0.5:9000 546224ce9b743 $2y$10$tVZCNvnZSInFeX.lQ62LWuuo3TJbMeOP4R0BbS3dxxyJwdvudFqka /data/mkam/dabble/imgs2</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
