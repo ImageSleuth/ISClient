@@ -37,6 +37,11 @@ public class ISAsyncClient {
         Test.testNull(user);
         Test.testNull(password);
         Test.testDir(imgDir);
+        
+        if (url.endsWith("/")) {
+            // removes trailing "/"
+            url = url.substring(0, url.length()-1);
+        }
 
         this.url = url;
         this.user = user;
@@ -94,7 +99,7 @@ public class ISAsyncClient {
         
         if (hac2.iFiles.isEmpty()) {
             System.out.println("no image files left to process in image dir " + hac2.imgDir);
-            System.exit(1);
+            System.exit(0);
         }
         try {
             Poster poster = new Poster(hac2);
@@ -121,7 +126,7 @@ public class ISAsyncClient {
     }
 
     public static File getJsonFile(File file) {
-        return new File(file.getParent() + File.separator + getBaseName(file) + "-picmod.json");
+        return new File(file.getParent() + File.separator + getBaseName(file) + ".json");
     }
 
     public static String getBaseName(File file) {
